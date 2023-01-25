@@ -1,0 +1,15 @@
+@font-face {
+    font-family: CursedTimerUlil-Aznm;
+    src: url(CursedTimerUlil-Aznm.ttf);
+}
+
+.score-text {
+    font-family: CursedTimerUlil-Aznm;
+    font-size: 100px;
+}
+
+.button-text {
+    font-family: CursedTimerUlil-Aznm;
+}
+
+

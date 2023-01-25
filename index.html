@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/5/materia/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-dark">
+    <div class="container mt-3">
+        <header class="d-flex align-items-center py-2 mb-3">
+            <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                <span class="fs-4 text-light">🏀 Basketball Scoreboard</span>
+            </a>
+        </header>
+
+        <div class="mb-4 bg-success rounded-3">
+            <div class="container py-5">
+                <div class="row d-flex align-items-center mx-auto mb-5">
+                    <div class="col-6 text-center">
+                        <p class="fs-1 text-white fw-bold ">HOME</span>
+                        <div id="home-card" class="card text-white bg-dark mb-3 mx-auto " style="max-width: 20rem;">
+                            <div class="card-body">
+                                <p class=" fw-bold text-white my-2 score-text" id="home-score"></span>
+                            </div>
+                        </div>
+                        <button onclick="add1toHomeScore()" type="button" class="btn btn-light button-text">+1</button>
+                        <button onclick="add2toHomeScore()" type="button" class="btn btn-light button-text">+2</button>
+                        <button onclick="add3toHomeScore()" type="button" class="btn btn-light button-text">+3</button>
+                    </div>
+
+                    <div class="col-6 text-center">
+                        <p id="guest-card" class="fs-1 text-white fw-bold">GUEST</span>
+                        <div id="guest-card" class="card text-white bg-dark mb-3 mx-auto " style="max-width: 20rem;">
+                            <div class="card-body">
+                                <p class=" fw-bold text-white my-2 score-text" id="guest-score"></span>
+                            </div>
+                        </div>
+                        <button onclick="add1toGuestScore()" type="button" class="btn btn-light button-text">+1</button>
+                        <button onclick="add2toGuestScore()" type="button" class="btn btn-light button-text">+2</button>
+                        <button onclick="add3toGuestScore()" type="button" class="btn btn-light button-text">+3</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-md-stretch mb-5">
+            <div class="col-md-6 pb-4">
+                <div class="h-100 py-4 px-4 text-bg-dark border-dark rounded-3">
+                    <h2 class="pb-3">Options</h2>
+                    <button onclick="clearScores()" class="btn btn-primary mr-2" type="button">new game</button>
+                    <button onclick="saveScores()" class="btn btn-success mr-2" type="button">Save result</button>
+
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="h-100 p-4 bg-light border rounded-3">
+                    <h2>Previous games</h2>
+                    <div class="pb-4" id="saved-scores">
+                        <span id="no-saved" class="text-muted"><em>No saved games...</em></span>
+                    </div>
+                    <button onclick="clearSavedScores(); " class="btn btn-danger disabled" type="button" id="clear-saved">Clear saved results</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+</body>
+
+</html>
